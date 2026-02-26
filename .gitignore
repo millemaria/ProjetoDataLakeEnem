@@ -1,44 +1,58 @@
-# ==================================
-# 1. Ignorar Dados Brutos e Extrações
-# ==================================
-# A pasta 'dados' abriga os .zips originais (>600MB) e os CSVs extraídos gigantescos.
-# O GitHub bloqueia arquivos maiores que 100MB. Isso IMPEDE que seu push falhe!
-dados/*
-!dados/.gitkeep
+# =============================================
+# DADOS PESADOS - NÃO SUBIR NO GIT
+# =============================================
 
-# ==================================
-# 2. Ignorar Camadas do Data Lake
-# ==================================
-# O Data Lake processado via Spark local não deve ir para o versionamento.
-data_lake/*
-!data_lake/.gitkeep
+# ZIPs dos microdados (gigabytes)
+dados/*.zip
+dados/**/*.zip
 
+# Pastas extraídas dos microdados
+dados/microdados_enem_2020/
+dados/microdados_enem_2021/
+dados/microdados_enem_2022/
+dados/microdados_enem_2023/
+dados/microdados_enem_2024/
+
+# CSVs grandes dentro de dados
+dados/**/*.csv
+dados/**/*.CSV
+
+# Data Lake - arquivos parquet gerados (pesados)
 data_lake/bronze/
 data_lake/prata/
+data_lake/ouro/
 
-# ==================================
-# 3. Cache do Python e Spark
-# ==================================
+# =============================================
+# PYTHON
+# =============================================
 __pycache__/
 *.py[cod]
 *$py.class
-*.crc
-_SUCCESS
-.spark-staging
+*.egg-info/
+.eggs/
+dist/
+build/
+.env
+.venv
+env/
+venv/
+
+# =============================================
+# JUPYTER
+# =============================================
+.ipynb_checkpoints/
+*.ipynb~
+
+# =============================================
+# SISTEMA
+# =============================================
+.DS_Store
+Thumbs.db
+*.log
+
+# =============================================
+# DOCKER / SPARK
+# =============================================
+spark-warehouse/
 derby.log
 metastore_db/
-
-# ==================================
-# 4. Ambientes Virtuais 
-# ==================================
-venv/
-.env
-.venv/
-env/
-
-# ==================================
-# 5. Jupyter Notebooks e IDEs
-# ==================================
-.ipynb_checkpoints/
-.vscode/
-.idea/

@@ -12,6 +12,8 @@ services:
     # Container fica SEMPRE VIVO — pipeline é acionada via "docker exec"
     # Exemplo: docker exec spark_enem bash /app/run.sh --fonte enem --etapa bronze
     command: tail -f /dev/null
+    # O seu comando originalmente modificado foi preservado aqui por segurança:
+    # command: bash src/run_pipeline.sh
 
   jupyter:
     build: .
