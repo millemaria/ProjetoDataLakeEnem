@@ -25,3 +25,13 @@ Se o time quiser escalar do Business Intelligence tradicional para IA:
 - **Clusterização de Performance:** Aplicar um agrupamento (ex: Algoritmo K-Means) sobre os eixos das 4 provas objetivas para enxergar quais são as "personas acadêmicas" naturais originadas pelo INEP sem influência das categorias fixas demográficas.
 
 > Todos esses insights podem, e devem, ser visualizados graficamente com o uso das bibliotecas `matplotlib` ou `seaborn` durante a apresentação/estudo usando a API de importação do Pandas via `read_parquet`.
+
+## 🏆 Implementação Concluída: Camada Ouro (Gold Layer) no Jupyter 🏆
+
+O nosso ambiente de *Analytics*, configurado para consumir e consultar a camada *Gold*, consolidou bases essenciais em formato `.parquet`. Isso permitiu a criação de **novos insights dinâmicos** que o time já pode demonstrar (e estender) diretamente no laboratório rodando em `notebooks/storytelling_enem.ipynb`:
+
+**1. Ranking de Excelência (Redação)**
+A partir da tabela agregada `ranking_redacao_por_uf`, conseguimos visualizar de imediato o Top 10 das Unidades Federativas em termos de Média de Notas de Redação, focando apenas nos milhões alunos validados na base.
+
+**2. Evolução e Inclusão (Perfil Sociodemográfico)**
+Extraindo os dados de volume em `distribuicao_perfil`, o notebook fornece análises que monitoram e traçam mapas da evolução das participações segmentadas pelas autodeclarações de Cor/Raça, engajando políticas de inclusão no tempo.
