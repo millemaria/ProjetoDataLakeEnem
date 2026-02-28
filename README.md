@@ -77,4 +77,10 @@ Abaixo estão os guias detalhados encontrados na pasta `docs/` que acompanham o 
 - **[Guia de Apresentação ao Time](docs/guia_apresentacao_time.md):** Manual focado em como reproduzir a pipeline (idempotência) para os stakeholders.
 - **[Oportunidade Analítica & Insights](docs/insights_analiticos.md):** Matriz de estudos sociais, desigualdade geográfica e modelos recomendados de ML usando o Dataset Lapidado.
 
+## Integrantes
 
+-Jamille Maria 
+-Larissa de Sá
+-Rodrigo Souza
+-José Adriano
+-Lincoln Rodrigues
